@@ -5,8 +5,9 @@
 
 
 {% if user.is_authenticated %}
-<h1>Records...</h1>
-
+<br>
+<h1>Customer Dashboard</h1>
+<br>
 
 <table class="table table-striped table-hover table-bordered">
     <thead class="table-dark">
@@ -49,6 +50,7 @@
 
 {% else %}
 <div class="col-md-6 offset-md-3">
+    <br>
     <h1> Login </h1>
     <br>
     <form action="{% url 'home' %}" method="POST">
@@ -61,7 +63,7 @@
             <input type="password" class="form-control" name="password" placeholder="Password" required>
         </div>
 
-        <button type="submit" class="btn btn-secondary">Login</button>
+        <button type="submit" class="btn btn-primary">Login</button>
 
     </form>
 </div>
